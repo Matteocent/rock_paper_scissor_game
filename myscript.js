@@ -1,7 +1,7 @@
 /*Brief presentation about the game*/
 console.log("Game of 'Rock' 'Paper' 'Scissors'");
 function getHumanChoice() {
-    let HumanChoice = prompt("Enter your choice between 'Rock' 'Paper' 'Scissors':");
+    let HumanChoice = prompt("Enter your choice between 'Rock' 'Paper' 'Scissors':").toLowerCase();
     return HumanChoice;
 }
 
@@ -16,7 +16,7 @@ let ComputerScore = 0;
 /*In this function the argument names are casual, not referred to previous functions */
 function playRound(HumanChoice, ComputerChoice) {
     let output;
-    if (HumanChoice == "Rock") {
+    if (HumanChoice == "rock") {
         if (ComputerChoice <= 3) {
             output = ("Try again, you both choose 'Rock'.");
         } else if (ComputerChoice > 3 && ComputerChoice <= 6) {
@@ -27,7 +27,7 @@ function playRound(HumanChoice, ComputerChoice) {
             HumanScore ++;
         }
     }
-    if (HumanChoice == "Paper") {
+    if (HumanChoice == "paper") {
         if (ComputerChoice <= 3) {
             output = ("You won, Paper beats Rock.");
             HumanScore ++;
@@ -38,7 +38,7 @@ function playRound(HumanChoice, ComputerChoice) {
             ComputerScore ++;
         }
     }
-    if (HumanChoice == "Scissors") {
+    if (HumanChoice == "scissors") {
         if (ComputerChoice <= 3) {
             output = ("Rock beats Scissors, Computer wins.")
             ComputerScore ++;
@@ -54,4 +54,8 @@ function playRound(HumanChoice, ComputerChoice) {
     return output;
 }
 
+console.log(playRound(getHumanChoice(), getComputerChoice()));
+console.log(playRound(getHumanChoice(), getComputerChoice()));
+console.log(playRound(getHumanChoice(), getComputerChoice()));
+console.log(playRound(getHumanChoice(), getComputerChoice()));
 console.log(playRound(getHumanChoice(), getComputerChoice()));
