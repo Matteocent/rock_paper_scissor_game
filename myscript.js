@@ -49,8 +49,8 @@ function playRound(HumanChoice, ComputerChoice) {
             output = ("Try again, you both choose Scissors");
         }
     }
-    console.log(HumanChoice);
-    console.log(ComputerChoice);
+    console.log(`User score is: ${HumanScore}`);
+    console.log(`Computer score is: ${ComputerScore}`);
     return output;
 }
 
